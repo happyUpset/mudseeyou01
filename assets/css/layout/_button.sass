@@ -1,0 +1,339 @@
+//.btn-base
+//  display: inline-block
+//  line-height: 1
+//  white-space: nowrap
+//  cursor: pointer
+//  background: $green
+//  color: $common-anti
+//  text-align: center
+//  box-sizing: border-box
+//  outline: none
+//  margin: 0
+//  font-weight: 500
+//  user-select: none
+//  padding: 10px 16px
+//  font-size: 14px
+//  border-radius: 20px
+//  transition: all 0.3s ease
+//  &:hover
+//    background-color: $green-light
+//    color: $common-anti
+//  &:active
+//    background-color: $green-dark
+//    color: $common-anti
+//
+//.btn-base-anti
+//  display: inline-block
+//  line-height: 1
+//  white-space: nowrap
+//  cursor: pointer
+//  background: $common-anti
+//  color: $green
+//  text-align: center
+//  box-sizing: border-box
+//  outline: none
+//  margin: 0
+//  font-weight: 500
+//  user-select: none
+//  padding: 10px 16px
+//  font-size: 14px
+//  border-radius: 20px
+//  transition: all 0.3s ease
+//  &:hover
+//    background-color: $common-anti
+//    color: $green-light
+//  &:active
+//    background-color: $common-anti
+//    color: $green-dark
+//
+//.btn-big
+//  display: inline-block
+//  line-height: 1
+//  white-space: nowrap
+//  cursor: pointer
+//  background: $green
+//  color: $common-anti
+//  text-align: center
+//  box-sizing: border-box
+//  outline: none
+//  margin: 0
+//  font-weight: 500
+//  user-select: none
+//  border-radius: 20px
+//  transition: all 0.3s ease
+//  padding: 12px 50px
+//  @extend %h4
+//  &:hover
+//    background-color: $green-light
+//  &:active
+//    background-color: $green-dark
+//
+//.btn-big-anti
+//  display: inline-block
+//  line-height: 1
+//  white-space: nowrap
+//  cursor: pointer
+//  background: $common-anti
+//  border: 1px solid $green
+//  color: $green
+//  text-align: center
+//  box-sizing: border-box
+//  outline: none
+//  margin: 0
+//  font-weight: 500
+//  user-select: none
+//  border-radius: 20px
+//  transition: all 0.3s ease
+//  padding: 12px 50px
+//  @extend %h4
+//  &:hover
+//    border: 1px solid $green-light
+//    color: $green-light
+//  &:active
+//    border: 1px solid $green-dark
+//    color: $green-dark
+//
+.btn-check-box
+  display: inline-block
+  line-height: 1
+  white-space: nowrap
+  cursor: pointer
+  background: $white
+  color: $base-font
+  text-align: center
+  box-sizing: border-box
+  outline: none
+  margin: 0
+  font-weight: 500
+  user-select: none
+  padding: 6px 10px
+  font-size: 14px
+  border-radius: 5px
+  border: 1px solid $black
+  transition: all 0.3s ease
+  /*&:hover
+    background-color: $first-color-light
+    color: $white
+    border: 1px solid $first-color-light
+  /*&:active
+    background-color: $first-color-dark
+    color: $white
+    border: 1px solid $first-color-dark
+  &.active
+    background-color: $first-color
+    color: $white
+    border: 1px solid $first-color
+//
+//
+//.button
+//  background-color: $first-color
+//  letter-spacing: 0.04rem
+//  width: 100%
+//  height: 100%
+//  border-radius: 5px
+//  text-align: center
+//  line-height: 3.6rem
+//  color: $common-anti
+//  font-size: 1.6rem
+//  cursor: pointer
+//  transition: all 0.3s ease
+//  &:hover
+//    background-color: $first-color-light
+//    color: $common-anti
+//.button-s
+//  background-color: $first-color
+//  width: 100%
+//  height: 100%
+//  border-radius: 5px
+//  text-align: center
+//  color: $common-anti
+//  cursor: pointer
+//  transition: all 0.3s ease
+//  &:hover
+//    background-color: $first-color-light
+//    color: $common-anti
+//
+//.button2
+//  display: inline-block
+//  line-height: 1
+//  white-space: nowrap
+//  cursor: pointer
+//  background: $first-color
+//  border: 1px solid #d8dce5
+//  color: $common-anti
+//  -webkit-appearance: none
+//  text-align: center
+//  box-sizing: border-box
+//  outline: none
+//  margin: 0
+//  font-weight: 500
+//  -moz-user-select: none
+//  -webkit-user-select: none
+//  -ms-user-select: none
+//  padding: 12px 20px
+//  font-size: 14px
+//  border-radius: 4px
+//  transition: all 0.3s ease
+//  &:hover
+//    background-color: $first-color-light
+//    color: $common-anti
+//  &:active
+//    background-color: $first-color-dark
+//    color: $common-anti
+//
+//
+//check box 效果
+.check-btn
+  position: relative
+  border: 1px solid $black
+  border-radius: 5px
+  background: #fff
+  height: 32px
+  width: 32px
+  z-index: 1
+  transition: border .25s linear
+  cursor: pointer
+  .line1
+    position: absolute
+    border-bottom: 3px solid $base-font
+    transition: all .25s linear
+    //transition-delay: 0.1s
+    transform: rotate(42deg)
+    opacity: 0
+    top: 6px
+    left: 6px
+  .line2
+    position: absolute
+    transform: rotate(122deg)
+    width: 0
+    height: 0
+    border-bottom: 3px solid $base-font
+    transition: all .25s linear
+    //transition-delay: 0.25s
+    opacity: 0
+    top: 10px
+    left: 10px
+.check-btn.checked
+  background: $first-color
+  border: 1px solid $first-color
+  //border: 10px solid $first-color
+  .line1
+    border-bottom: 3px solid $white
+    opacity: 1
+    width: 8px
+    height: 4px
+    top: 18px
+    left: 7px
+  .line2
+    border-bottom: 3px solid $white
+    opacity: 1
+    width: 20px
+    height: 4px
+    top: 13px
+    left: 8px
+.check-btn.denied
+  .line1
+    border-bottom: 3px solid $base-font
+    opacity: 1
+    transform: rotate(44deg)
+    width: 20px
+    height: 4px
+    top: 13px
+    left: 6px
+  .line2
+    border-bottom: 3px solid $base-font
+    opacity: 1
+    transform: rotate(132deg)
+    width: 20px
+    height: 4px
+    top: 13px
+    left: 6px
+
+//check box small 效果
+.check-btn-small
+  position: relative
+  border: 2px solid $first-color
+  border-radius: 5px
+  background: #fff
+  height: 24px
+  width: 24px
+  z-index: 1
+  transition: border .25s linear
+  cursor: pointer
+  .line1
+    position: absolute
+    border-bottom: 3px solid $base-font
+    transition: all .25s linear
+    //transition-delay: 0.1s
+    transform: rotate(42deg)
+    opacity: 0
+    top: 6px
+    left: 6px
+  .line2
+    position: absolute
+    transform: rotate(122deg)
+    width: 0
+    height: 0
+    border-bottom: 3px solid $base-font
+    transition: all .25s linear
+    //transition-delay: 0.25s
+    opacity: 0
+    top: 10px
+    left: 10px
+.check-btn-small.checked
+  background: $third-color
+  //border: 10px solid $first-color
+  .line1
+    border-bottom: 3px solid $white
+    opacity: 1
+    width: 8px
+    height: 4px
+    top: 13px
+    left: 2px
+  .line2
+    border-bottom: 3px solid $white
+    opacity: 1
+    width: 20px
+    height: 4px
+    top: 8px
+    left: 3px
+//
+////swiper
+///*.button-prev
+//  position: absolute
+//  top: 50%
+//  width: 40px
+//  height: 40px
+//  margin-top: -20px
+//  z-index: 10
+//  cursor: pointer
+//  border-radius: 5px
+//  border: 2px solid $first-color
+//  left: 0
+//  overflow: hidden
+//  .play-prev
+//    margin-top: 10px
+//    transform: rotate(180deg) scale(1.5)
+//    color: $first-color
+///*.button-next
+//  position: absolute
+//  top: 50%
+//  width: 40px
+//  height: 40px
+//  margin-top: -20px
+//  z-index: 10
+//  cursor: pointer
+//  border-radius: 5px
+//  border: 2px solid $first-color
+//  right: 0
+//  overflow: hidden
+//  .play-next
+//    margin-top: 10px
+//    transform: scale(1.5)
+//    color: $first-color
+//
+//.swiper-pagination-bullet
+//  width: 12px !important
+//  height: 12px !important
+//.swiper-pagination-bullet-active
+//  background: $first-color !important

@@ -1,0 +1,169 @@
+@import "layout/vue_animate"
+@import "layout/button"
+@import "layout/components/icon"
+@import "layout/components/loading"
+@import "layout/customer/bootstrap"
+@import "layout/customer/datePickerJs"
+@import "layout/plugins/vueNotification"
+@import "layout/plugins/keyboard"
+@import "layout/plugins/_swiper.css"
+
+html
+  font-size: 10px
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+#app
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
+  font-size: 14px
+  background: #ededed
+  //color: var(--bc-white)
+body
+  .app-content
+    .loading
+      position: relative
+      height: 50vh
+      width: 100%
+    .content
+      background: #fff
+
+  ul,li,h1,h2,h3,h4,h5,h6
+    list-style-type: none
+    padding: 0
+    margin: 0
+  button
+    border: none
+    margin: 0
+    background: none
+    padding: 0
+    color: inherit
+    cursor: pointer
+  .img-box
+    img
+      width: 100%
+      height: auto
+  .unSelect
+    user-select: none
+  .cursor-init
+    cursor: default
+  .cursor-pointer
+    cursor: pointer
+  //列排設定
+  .tr
+    display: block
+  //列排設定
+  .td
+    display: inline-block
+    vertical-align: middle
+  .td-o
+    display: inline-block
+  //a
+  //  text-decoration: none !important
+  //  &:hover
+  //    text-decoration: none
+
+  .verticalCenter
+    position: relative
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+  .horizontalCenter
+    position: relative
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+/* 網站設定 */
+/*字型大小設定*/
+
+
+
+//table
+.o-table
+  display: table
+  border-collapse: collapse
+  .o-tr
+    display: table-row
+  .o-th
+    display: table-cell
+  .o-td
+    display: table-cell
+
+
+
+//自定義燈箱效果
+.modal-frame
+  position: fixed
+  width: 100vw
+  height: 100vh
+  top: 0
+  left: 0
+  .closeMask
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 0
+    opacity: 0.6
+    background: #000
+  .modal-box
+    position: relative
+    //max-width: 96vw
+    width: 96%
+    margin: 60px auto 0
+    z-index: 1
+    &.normal
+      width: 96vw
+      max-width: 700px
+    .top-btn-box
+      display: flex
+      justify-content: center
+      position: absolute
+      top: -43px
+      width: 100%
+      @include mobile
+        top: initial
+        bottom: -45px
+      .close-btn
+        border-radius: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 30px
+        width: 30px
+        .fa-times
+          width: 30px
+
+.gallery-modal-frame
+  position: fixed
+  width: 100vw
+  height: 100vh
+  top: 0
+  left: 0
+  .closeMask
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 0
+    opacity: 0.9
+    background: #000
+  .gallery-modal-box
+    position: relative
+    max-width: 96vw
+    width: 96%
+    margin: 60px auto 0
+    z-index: 1
+
+//modal
+.modal-background-color
+  background: var(--bc-white)
+.modal-frame-border-color
+  border-color: var(--bc-first-color)
+.modal-close-background-color
+  background: var(--bc-green)
+  transition: .3s ease all
+  @include desktop
+    &:hover
+      background: var(--bc-first-color-light)
+.modal-close-font-color
+  color: var(--bc-white)

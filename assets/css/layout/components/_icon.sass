@@ -1,0 +1,170 @@
+//BingoBall
+.bingo-ball
+  //cursor: pointer
+  @include desktop
+    .ball
+      transition: 0.3s all ease
+    .ball-hover
+      cursor: pointer
+      &:hover
+        opacity: 0.6
+
+  .ball
+    margin: 0
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    //border: 1px solid #000
+    border-radius: 50%
+    color: white
+    //&:before
+    //  content: ""
+    //  position: absolute
+    //  //background: radial-gradient(circle at 50% 120%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 70%)
+    //  border-radius: 50%
+    //  bottom: 2.5%
+    //  left: 5%
+    //  opacity: 0.6
+    //  height: 100%
+    //  width: 90%
+    //  //filter: blur(5px)
+    //  z-index: 2
+    //&:after
+    //  content: ""
+    //  width: 100%
+    //  height: 100%
+    //  position: absolute
+    //  top: 5%
+    //  left: 10%
+    //  border-radius: 50%
+    //  //background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 14%, rgba(255, 255, 255, 0) 50%)
+    //  //transform: translateX(-25%) translateY(-27%) skewX(-20deg)
+    //  //filter: blur(10px)
+    .blank
+      display: flex
+      align-items: center
+      justify-content: center
+      .number
+        text-align: center
+        height: 100%
+        width: 100%
+        font-family: Arial
+        font-weight: bold
+  /*節省效能*/
+  .gray
+    //background: radial-gradient(circle at 50% 120%, #fff, #dedede 80%, #cccccc 100%)
+    background: $tv-un-number
+    .blank
+      .number
+        color: $tv-un-number-font
+  .white
+    //background: radial-gradient(circle at 50% 120%, #fff, #dedede 80%, #cccccc 100%)
+    background: $background-gray-light
+    .blank
+      .number
+        color: $black
+  .disabled
+    //background: radial-gradient(circle at 50% 120%, #fff, #dedede 80%, #cccccc 100%)
+    background: var(--bc-gray-5) !important
+    cursor: auto !important
+    .blank
+      .number
+        color: var(--bc-gray-3) !important
+  .black
+    //background: radial-gradient(circle at 50% 120%, #323232, #0a0a0a 80%, #000000 100%)
+    background: #323232
+  .red
+    //background: radial-gradient(circle at 50% 120%, $red-light, $red 80%, $red-dark 100%)
+    background: $red
+  .orange
+    //background: radial-gradient(circle at 50% 120%, $orange-light, $orange 80%, $orange-dark 100%)
+    background: $first-color
+    //color: $orange-dark
+  .blue
+    //background: radial-gradient(circle at 50% 120%, $blue-light, $blue 80%, $blue-dark 100%)
+    background: $blue
+  .yellow
+    //background: radial-gradient(circle at 50% 120%, $yellow-light, $yellow 80%, $yellow-dark 100%)
+    background: $yellow
+    //color: $yellow-dark
+  .indigo
+    //background: radial-gradient(circle at 50% 120%, $indigo-light, $indigo 80%, $indigo-dark 100%)
+    background: $indigo
+    //color: $indigo-dark
+  .cyan-blue
+    //background: radial-gradient(circle at 50% 120%, $cyan-blue-light, $cyan-blue 80%, $cyan-blue-dark 100%)
+    background: $cyan-blue
+    //color: $cyan-blue-dark
+  .green
+    //background: radial-gradient(circle at 50% 120%, #79ff83, #7cff4d 80%, #06c700 100%)
+    background: $green
+  .pink
+    //background: radial-gradient(circle at 50% 120%, $pink-light, $pink 80%, $pink-dark 100%)
+    background: $pink
+  //color: $pink-dark
+  .tv-blue
+    //background: radial-gradient(circle at 50% 120%, #79ff83, #7cff4d 80%, #06c700 100%)
+    background: $tv-blue
+  .tv-red
+    //background: radial-gradient(circle at 50% 120%, #79ff83, #7cff4d 80%, #06c700 100%)
+    background: $tv-red
+  .tv-pink
+    //background: radial-gradient(circle at 50% 120%, #79ff83, #7cff4d 80%, #06c700 100%)
+    background: $tv-pink
+
+.bingo-ball-big-mode
+  width: 64px
+  height: 64px
+  .blank
+    //transform: translateX(4%) translateY(-3%) skewX(4deg) skewY(1deg)
+    .number
+      font-size: 3.4rem
+.bingo-ball-middle-mode
+  width: 48px
+  height: 48px
+  .blank
+    .number
+      font-size: 3rem
+.bingo-ball-sub-middle-mode
+  width: 44px
+  height: 44px
+  .blank
+    .number
+      font-size: 3rem
+.bingo-ball-higher-small-mode
+  width: 36px
+  height: 36px
+  .blank
+    .number
+      font-size: 2.5rem
+.bingo-ball-small-mode
+  width: 34px
+  height: 34px
+  .blank
+    .number
+      line-height: 2.2rem
+      font-size: 2rem
+.bingo-ball-higher-tiny-mode
+  width: 30px
+  height: 30px
+  .blank
+    .number
+      line-height: 2.1rem
+      font-size: 1.8rem
+.bingo-ball-tiny-mode
+  width: 28px
+  height: 28px
+  .blank
+    .number
+      line-height: 2rem
+      font-size: 1.6rem
+.bingo-ball-ex-tiny-mode
+  width: 22px
+  height: 22px
+  .blank
+    .number
+      line-height: 1.6rem
+      font-size: 1.4rem
+
+//Button

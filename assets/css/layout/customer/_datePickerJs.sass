@@ -1,0 +1,12 @@
+.vdp-datepicker__calendar
+  z-index: 350 !important
+  @include max-1000
+    position: fixed !important
+    top: 20% !important
+    left:  calc((100% - 300px) / 2) !important
+.vdp-datepicker
+  .form-control[readonly]
+    background: $white
+    @include with-out-desktop
+      width: calc(100% - 40px)
+      font-size: 1.8rem

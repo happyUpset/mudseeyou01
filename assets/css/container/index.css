@@ -1,0 +1,3 @@
+.container{
+  @apply w-[96%] mx-auto px-10 lg:max-w-[calc(96%-20px)] max-w-[1120px] xl:max-w-[1280px] 2xl:max-w-[1520px] 3xl:max-w-[1760px]
+}

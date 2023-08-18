@@ -2,62 +2,21 @@
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Setup
+## 還沒有做的
 
-Make sure to install the dependencies:
+### 近期可以加入進去:
 
-```bash
-# npm
-npm install
+[剪貼簿](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/clipboard)
 
-# pnpm
-pnpm install
+[離線狀態](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/onLine)
 
-# yarn
-yarn install
-```
+頁面控制 = routerControl
 
-## Development Server
+延遲器 = clearTimeout ,requestAnimationFrame
 
-Start the development server on `http://localhost:3000`:
+設定裝置主題 = css::prefers-color-scheme `達康有使用情境`
 
-```bash
-# npm
-npm run dev
+## CSS 設定
 
-# pnpm
-pnpm run dev
+設定基礎架構、可提供 theme 甚至是 .env 改動樣式
 
-# yarn
-yarn dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

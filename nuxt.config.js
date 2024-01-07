@@ -62,7 +62,8 @@ export default defineNuxtConfig({
     { src: '@/plugins/swiper.ts', mode: 'client' },
     { src: '@/plugins/svg.ts', mode: 'client'},
   ],
-  modules: ['@pinia/nuxt', '@vite-pwa/nuxt'],
+  modules: ['@pinia/nuxt', '@vite-pwa/nuxt',
+    '@nuxtjs/svg-sprite'],
   pwa: {
     manifest: {
       name: APP_TITLE,

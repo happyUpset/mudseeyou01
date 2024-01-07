@@ -67,10 +67,24 @@ export const URL = {
 
     belong: 'func',
   },
+  lottie: {
+    path: '/func/lottie',
+    name: 'func-lottie',
+    locale: 'lottie',
+
+    belong: 'func',
+  },
   currency: {
     path: '/func/currency',
     name: 'func-currency',
     locale: '金錢分段',
+
+    belong: 'func',
+  },
+  clipboard: {
+    path: '/func/clipboard',
+    name: 'func-clipboard',
+    locale: '剪貼簿',
 
     belong: 'func',
   },
@@ -94,6 +108,13 @@ export const URL = {
     locale: 'storage',
 
     belong: 'func',
+  },
+  collapse: {
+    path: '/com/collapse',
+    name: 'com-collapse',
+    locale: '風琴功能',
+
+    belong: 'com',
   },
   modal: {
     path: '/com/modal',

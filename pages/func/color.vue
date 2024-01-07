@@ -4,12 +4,12 @@
       <div class="text-2 py-16">顏色轉換</div>
       <div class="my-6">
         <label for="number">顏色</label>
-        <input class="form-control my-4" id="number" type="text" v-model="color">
+        <input class="form-control my-4" id="number" type="color" v-model="color">
         <label for="number">亮暗值 0 > x > 2 數值越大越亮</label>
-        <input class="form-control my-4" id="number" type="text" v-model="pt">
+        <input class="form-control my-4" id="number" type="range" max="3" min="0" step="0.01" v-model="pt">
       </div>
       <div class="w-50 h-50" :style="{backgroundColor: show}"></div>
-      {{show}}
+      {{pt}}
     </div>
   </div>
 </template>

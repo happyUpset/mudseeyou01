@@ -1,7 +1,7 @@
 <template>
-  <NuxtLayout :style="STYLE" :class="[platform.browserName,platform.deviceName]" >
+  <NuxtLayout :style="STYLE" :class="[platform.browserName,platform.deviceName]">
     <NuxtLoadingIndicator />
-    <NuxtPage/>
+    <NuxtPage />
   </NuxtLayout>
 </template>
 

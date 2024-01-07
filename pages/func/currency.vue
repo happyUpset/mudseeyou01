@@ -14,7 +14,7 @@
 <script setup>
 import {useCurrency} from "~/composables/useFilters";
 
-const value = ref(5000)
+const value = ref(5000000)
 
 const {currency} = useCurrency()
 

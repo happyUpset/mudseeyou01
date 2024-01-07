@@ -43,6 +43,8 @@
       </div>
     </div>
 
+    <notifications />
+
     <client-only>
       <LayoutsQuickTopBtn class="z-6"/>
       <LayoutsNotification/>

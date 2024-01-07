@@ -41,14 +41,15 @@
       <h1 class="text-5 my-20">通用</h1>
       <div class="icon grid grid-cols-5 gap-8 2sm:grid-cols-3">
         <div class="shadow-1-2-6 p-12" v-for="icon in modules">
-          <NuxtIcon2
-            :name="icon"
-            :style="{
-              width: options.w + 'px',
-              height: options.h + 'px',
-              color: options.color,
-            }"
-             class="mx-auto"/>
+          <svg-icon :name="icon"  class="mx-auto w-35 h-35 text-[#456789]"/>
+<!--          <NuxtIcon2-->
+<!--            :name="icon"-->
+<!--            :style="{-->
+<!--              width: options.w + 'px',-->
+<!--              height: options.h + 'px',-->
+<!--              color: options.color,-->
+<!--            }"-->
+<!--             class="mx-auto"/>-->
           <div class="">{{ icon }}</div>
         </div>
       </div>
@@ -57,31 +58,26 @@
       <h1 class="text-5 my-20">分類</h1>
       <div class="icon grid grid-cols-5 gap-8 2sm:grid-cols-3">
         <div class="shadow-1-2-6 p-12" v-for="icon in category">
-          <NuxtIcon2
-            :name="icon"
-            :style="{
-            width: options.w + 'px',
-            height: options.h + 'px',
-            color: options.color,
-          }"/>
-          <div class="">{{ icon }}</div>
-        </div>
-      </div>
-    </section>
-    <section>
-<!--      <h1 class="text-5 my-20">設備</h1>-->
-<!--      <div class="icon grid grid-cols-5 gap-8 2sm:grid-cols-3">-->
-<!--        <div class="shadow-1-2-6 p-12" v-for="icon in amenities">-->
-<!--          <svg-icon-->
-<!--            :icon-class="icon"-->
+          <svg-icon :name="icon"  class="mx-auto w-35 h-35 text-[#456789]"/>
+<!--          <NuxtIcon2-->
+<!--            :name="icon"-->
 <!--            :style="{-->
 <!--            width: options.w + 'px',-->
 <!--            height: options.h + 'px',-->
 <!--            color: options.color,-->
 <!--          }"/>-->
-<!--          <div class="">{{ icon }}</div>-->
-<!--        </div>-->
-<!--      </div>-->
+          <div class="">{{ icon }}</div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h1 class="text-5 my-20">設備</h1>
+      <div class="icon grid grid-cols-2 gap-8 2sm:grid-cols-3">
+        <div class="shadow-1-2-6 p-12" v-for="icon in amenities">
+          <SvgIcon :name="icon"  class="mx-auto w-35 h-35 text-[#456789]"/>
+          <div class="">{{ icon }}</div>
+        </div>
+      </div>
     </section>
   </div>
 </template>
@@ -101,11 +97,11 @@ const amenities = ref(null)
 function setFiles(name){
   let files = null
   if(name === 'icon')
-    files = import.meta.glob('@/assets/icons/*.svg');
+    files = import.meta.glob('@/assets/sprite/svg/*.svg');
   else if(name === 'amenities')
-    files = import.meta.glob('@/assets/icons/common/*.svg');
+    files = import.meta.glob('@/assets/sprite/svg/common/*.svg');
   else if(name === 'category')
-    files = import.meta.glob('@/assets/icons/banner/*.svg');
+    files = import.meta.glob('@/assets/sprite/svg/banner/*.svg');
   else
     return [];
 
@@ -116,7 +112,7 @@ function setFiles(name){
   return Object.keys(files).reduce((modules, modulePath) => {
     // set './app.js' => 'app'
     // modules[i] = modulePath.replace(/^\.\/(.*)\.\w+$/, '$1')
-    modules[i] = modulePath.replace(/\/assets\/icons\/(.*?)(?:\.svg)$/, '$1')
+    modules[i] = modulePath.replace(/\/assets\/sprite\/svg\/(.*?)(?:\.svg)$/, '$1')
     i++
     console.log(modules)
     return modules

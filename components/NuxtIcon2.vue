@@ -18,17 +18,17 @@ const icon = ref('')
 
 watchEffect(async () => {
   try {
-    const iconsImport = import.meta.glob('assets/icons/**/**.svg', {
+    const iconsImport = import.meta.glob('assets/sprite/svg/**/**.svg', {
       as: 'raw',
       eager: false
     })
-    let rawIcon = await iconsImport[`/assets/icons/${props.name}.svg`]()
+    let rawIcon = await iconsImport[`/assets/sprite/svg/${props.name}.svg`]()
     let reg = /<svg/
     rawIcon = rawIcon.replace(reg,`<svg class="${props.class}"`)
     icon.value = rawIcon
   } catch {
     console.error(
-      `[nuxt-icons] Icon '${props.name}' doesn't exist in 'assets/icons'`
+      `[nuxt-icons] Icon '${props.name}' doesn't exist in 'assets/sprite/svg'`
     )
   }
 })
